@@ -458,6 +458,104 @@ footer a:hover { text-decoration: underline; }
 @media (min-width: 769px) and (max-width: 1024px) {
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── Deep Feature Sections ── */
+.deep-feature {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.deep-feature .feature-title {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+.deep-feature .feature-desc {
+  font-size: 1.05rem;
+  color: #888;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+}
+.feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pill {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  background: rgba(239, 159, 39, 0.08);
+  color: #EF9F27;
+  border: 1px solid rgba(239, 159, 39, 0.15);
+}
+.feature-divider {
+  height: 1px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, rgba(239, 159, 39, 0.2), transparent);
+}
+
+/* ── Checklist ── */
+.checklist-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
+  margin-top: 2.5rem;
+}
+.checklist-category {
+  background: #111;
+  padding: 1.25rem 1.5rem;
+}
+.checklist-category:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+.checklist-cat-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #EF9F27;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.85rem;
+}
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.checklist-item:last-child { margin-bottom: 0; }
+.check-mark {
+  color: #EF9F27;
+  font-size: 0.85rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+.check-text {
+  font-size: 0.85rem;
+  color: #bbb;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .checklist-grid { grid-template-columns: 1fr; }
+  .deep-feature { padding: 3rem 1.5rem; }
+}
 </style>
 </head>
 <body>
@@ -589,6 +687,103 @@ footer a:hover { text-decoration: underline; }
   </div>
 </section>
 
+
+<!-- ═══════════════════════ DEEP FEATURES ═══════════════════════ -->
+
+<div class="deep-feature reveal">
+  <p class="section-label">Stream Anything</p>
+  <div class="feature-title">Stremio addons meet<br>debrid services.</div>
+  <div class="feature-desc">
+    Browse movies and series from Stremio addons. Pick a stream. Streamline resolves it through your debrid service for instant, buffer-free playback — no torrenting, no waiting.
+  </div>
+  <div class="feature-pills">
+    <span class="pill">Real-Debrid</span>
+    <span class="pill">AllDebrid</span>
+    <span class="pill">Premiumize</span>
+    <span class="pill">Instant cache check</span>
+    <span class="pill">MKV transcoding</span>
+  </div>
+</div>
+
+<div class="feature-divider"></div>
+
+<div class="deep-feature reveal">
+  <p class="section-label">Rich Metadata</p>
+  <div class="feature-title">Every program gets<br>the full treatment.</div>
+  <div class="feature-desc">
+    Streamline automatically enriches your EPG with TMDB data — HD posters, backdrops, cast photos, director credits, ratings, and trailers. Your channel guide looks like Netflix, not a spreadsheet.
+  </div>
+  <div class="feature-pills">
+    <span class="pill">TMDB auto-matching</span>
+    <span class="pill">HD posters & backdrops</span>
+    <span class="pill">Cast & crew</span>
+    <span class="pill">Ratings</span>
+    <span class="pill">Trailers</span>
+    <span class="pill">7-day cache</span>
+  </div>
+</div>
+
+<div class="feature-divider"></div>
+
+<div class="deep-feature reveal">
+  <p class="section-label">Any Provider</p>
+  <div class="feature-title">Bring whatever<br>you've got.</div>
+  <div class="feature-desc">
+    M3U playlists, Xtream Codes, or XMLTV guides. Streamline parses them all and presents a unified, beautiful interface regardless of where your content comes from.
+  </div>
+  <div class="feature-pills">
+    <span class="pill">M3U / M3U8</span>
+    <span class="pill">Xtream Codes API</span>
+    <span class="pill">XMLTV EPG</span>
+  </div>
+</div>
+
+<div class="feature-divider"></div>
+
+<!-- ═══════════════════════ CHECKLIST ═══════════════════════ -->
+<div class="checklist-section reveal">
+  <h2 class="section-title">Everything included.</h2>
+  <p class="section-desc" style="margin-left:auto;margin-right:auto;">One purchase. No subscriptions. No ads. No in-app purchases.</p>
+
+  <div class="checklist-grid">
+    <div class="checklist-category">
+      <div class="checklist-cat-title">Live TV</div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Sub-second channel switching</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Favorites with iCloud sync</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Channel numbers & logos</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Universal search</span></div>
+    </div>
+    <div class="checklist-category">
+      <div class="checklist-cat-title">Program Guide</div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">7-day EPG timeline</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Genre filtering</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">TMDB enrichment</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Now playing & up next</span></div>
+    </div>
+    <div class="checklist-category">
+      <div class="checklist-cat-title">Player</div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Gesture controls</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Sleep timer</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Mini EPG overlay</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">MKV transcode</span></div>
+    </div>
+    <div class="checklist-category">
+      <div class="checklist-cat-title">Discovery</div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Smart home screen</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Sports center</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Kids zone with PIN</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">VOD browsing</span></div>
+    </div>
+    <div class="checklist-category">
+      <div class="checklist-cat-title">Profiles & Sync</div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Multi-profile support</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Parental controls</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">iCloud sync</span></div>
+      <div class="checklist-item"><span class="check-mark">✓</span><span class="check-text">Background downloads</span></div>
+    </div>
+  </div>
+</div>
+
 <!-- ═══════════════════════ PRICING ═══════════════════════ -->
 <section class="pricing">
   <div class="pricing-card reveal">
@@ -600,8 +795,7 @@ footer a:hover { text-decoration: underline; }
 
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer>
-  <p>Built with SwiftUI by <a href="https://casavargas.app">Casa Vargas Digital</a></p>
-  <p>&copy; 2026 Streamline &middot; <a href="https://casavargas.app">casavargas.app</a></p>
+  <p>&copy; 2026 Streamline &middot; <a href="https://casavargas.app">Casa Vargas</a></p>
 </footer>
 
 <!-- Scroll reveal -->
